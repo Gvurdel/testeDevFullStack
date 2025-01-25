@@ -32,7 +32,7 @@ export default function Welcome({ auth }) {
                     {auth.user ? (
                         <Link
                             href={route("dashboard")}
-                            className="bg-orange-900 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300"
+                            className="bg-orange-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300"
                         >
                             Painel de Controle
                         </Link>

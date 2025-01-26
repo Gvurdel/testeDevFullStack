@@ -40,7 +40,7 @@ export default function Register() {
                         id="name"
                         name="name"
                         value={data.name}
-                        className="mt-1 block w-full"
+                        className="mt-1 block w-full rounded-[30px]"
                         autoComplete="name"
                         isFocused={true}
                         onChange={(e) => setData('name', e.target.value)}
@@ -59,7 +59,7 @@ export default function Register() {
                         type="email"
                         name="email"
                         value={data.email}
-                        className="mt-1 block w-full"
+                        className="mt-1 block w-full rounded-[30px]"
                         autoComplete="username"
                         onChange={(e) => setData('email', e.target.value)}
                         placeholder="EMAIL"
@@ -77,7 +77,7 @@ export default function Register() {
                         type="password"
                         name="password"
                         value={data.password}
-                        className="mt-1 block w-full"
+                        className="mt-1 block w-full rounded-[30px]"
                         autoComplete="new-password"
                         onChange={(e) => setData('password', e.target.value)}
                         placeholder="SENHA"
@@ -99,7 +99,7 @@ export default function Register() {
                         type="password"
                         name="password_confirmation"
                         value={data.password_confirmation}
-                        className="mt-1 block w-full"
+                        className="mt-1 block w-full rounded-[30px]"
                         autoComplete="new-password"
                         onChange={(e) =>
                             setData('password_confirmation', e.target.value)
@@ -116,7 +116,7 @@ export default function Register() {
 
                 <div className="mt-6 flex flex-col items-center">
 
-                    <PrimaryButton className="w-auto bg-black text-white-500 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold" disabled={processing}>
+                    <PrimaryButton className="w-auto bg-black text-white-500 py-3 rounded-[30px] hover:bg-gray-100 transition duration-300 font-semibold" disabled={processing}>
                             CADASTRE SE
                         </PrimaryButton><br></br>
 

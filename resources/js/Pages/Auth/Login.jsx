@@ -33,15 +33,15 @@ export default function Login({ status, canResetPassword }) {
 
             <form
                 onSubmit={submit}
-                className="bg-orange-400 p-7 rounded-lg shadow-md max-w-md mx-auto"
+                className="bg-orange-400 p-7 rounded-[30px] shadow-md max-w-md mx-auto"
             >
                     <img
-                            src="/images/logo.png" // Substitua pelo caminho correto do logo
+                            src="/images/logo10.jpeg" // Substitua pelo caminho correto do logo
                             alt="Logo Senac Learning"
-                            className="w-80 h-50 mx-auto mb-6" // Define o tamanho do logo
+                            className="w-80 h-50 rounded-[30px] mx-auto mb-6" // Define o tamanho do logo
                         />
 
-                <h1 className="text-center text-white font-bold text-lg mb-6">
+                <h1 className="text-3xl text-center text-white font-bold mb-6">
                     FAÇA O SEU LOGIN
                 </h1>
 
@@ -54,7 +54,7 @@ export default function Login({ status, canResetPassword }) {
                         type="email"
                         name="email"
                         value={data.email}
-                        className="mt-1 block w-full p-3 bg-white rounded-full focus:ring-2 focus:ring-blue-500"
+                        className="mt-1 block w-full p-3 bg-white focus:ring-2 rounded-[30px] focus:ring-blue-500"
                         autoComplete="username"
                         isFocused={true}
                         onChange={(e) => setData("email", e.target.value)}
@@ -73,7 +73,7 @@ export default function Login({ status, canResetPassword }) {
                         type="password"
                         name="password"
                         value={data.password}
-                        className="mt-1 block w-full p-3 bg-white rounded-full focus:ring-2 focus:ring-blue-500"
+                        className="mt-1 block w-full p-3 bg-white rounded-[30px] focus:ring-2 focus:ring-blue-500"
                         autoComplete="current-password"
                         onChange={(e) => setData("password", e.target.value)}
                         placeholder="SENHA"
@@ -97,7 +97,7 @@ export default function Login({ status, canResetPassword }) {
                 {/* Botão e link */}
                 <div className="mt-6 flex flex-col items-center">
                     <PrimaryButton
-                        className="w-auto bg-black text-white-500 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold"
+                        className="w-auto bg-black text-white-500 py-3 rounded-[30px] hover:bg-gray-100 transition duration-300 font-semibold"
                         disabled={processing}
                     >
                         Acesse agora
@@ -117,4 +117,5 @@ export default function Login({ status, canResetPassword }) {
 
         </GuestLayout>
     );
+
 }

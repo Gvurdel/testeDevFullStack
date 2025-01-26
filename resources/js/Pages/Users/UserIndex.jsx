@@ -3,9 +3,17 @@ import PrimaryButton from "@/Components/Button/PrimaryButton";
 import SuccessButton from "@/Components/Button/SuccessButton";
 import WarningButton from "@/Components/Button/WarningButton";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import { Head, Link } from "@inertiajs/react";
+import { Head, Link, useForm } from "@inertiajs/react";
 
 export default function UserIndex({ users }) {
+
+    const { delete: destroy, processing} = useForm();
+
+    const handleDelete = (userId) => {
+        if(window.confirm("Tem certeza que deseja apagar o usuário?"))
+            // Realizar a requisição para a rota apagar
+            destroy(route('users.destroy', userId));
+    }
     return (
         <AuthenticatedLayout>
             <Head title="Listar Usuários" />
@@ -68,7 +76,10 @@ export default function UserIndex({ users }) {
                                                 Editar
                                                 </WarningButton>
                                             </Link>
-                                                <DangerButton className="ms-1">
+                                                <DangerButton className="ms-1"
+                                                onClick={() => handleDelete(user.id)}
+                                                disabled={processing}
+                                                >
                                                     Apagar
                                                 </DangerButton>
                                             </td>

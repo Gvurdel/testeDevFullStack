@@ -35,8 +35,7 @@ export default function Register() {
                     />
 
                 <div>
-                    <InputLabel htmlFor="Nome" value="Name" />
-
+                    <InputLabel htmlFor="Nome" value="Nome" className="text-white" />
                     <TextInput
                         id="name"
                         name="name"
@@ -53,7 +52,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="Email" value="Email" />
+                    <InputLabel htmlFor="Email" value="Email" className="text-white"/>
 
                     <TextInput
                         id="email"
@@ -71,7 +70,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="Senha" value="Senha" />
+                    <InputLabel htmlFor="Senha" value="Senha" className="text-white" />
 
                     <TextInput
                         id="password"
@@ -92,6 +91,7 @@ export default function Register() {
                     <InputLabel
                         htmlFor="Confirme sua Senha"
                         value="Confirme sua Senha"
+                        className="text-white"
                     />
 
                     <TextInput

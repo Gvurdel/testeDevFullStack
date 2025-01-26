@@ -1,6 +1,7 @@
 <?php
-use App\Http\Controllers\UserController;
+
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,6 +25,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
+    Route::get('/user/{user}', [UserController::class, 'show'])->name('users.show');
+    Route::get('/create-user', [UserController::class, 'create'])->name('users.create');
 });
 
 require __DIR__.'/auth.php';

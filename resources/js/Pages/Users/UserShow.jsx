@@ -2,7 +2,7 @@ import PrimaryButton from "@/Components/Button/PrimaryButton";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, Link } from "@inertiajs/react";
 
-export default function UserIndex({ user }) {
+export default function UserShow({ user }) {
     return (
         <AuthenticatedLayout>
             <Head title="Visualizar Usuário" />

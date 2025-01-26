@@ -57,12 +57,17 @@ export default function UserIndex({ users }) {
                                             <td className="px-6 py-2 text-sm text-gray-900 dark:text-gray-100">{user.name}</td>
                                             <td className="hidden sm:table-cell px-6 py-2 text-sm text-gray-900 dark:text-gray-100">{user.email}</td>
                                             <td className="px-6 py-2 text-center text-gray-900 dark:text-gray-100">
+                                            <Link href={route('users.show', { id: user.id })}>
                                                 <PrimaryButton className="ms-1">
                                                     Visualizar
                                                 </PrimaryButton>
+                                            </Link>
+                                            
+                                            <Link href={route('users.edit', { id: user.id })}>
                                                 <WarningButton className="ms-1">
-                                                    Editar
+                                                Editar
                                                 </WarningButton>
+                                            </Link>
                                                 <DangerButton className="ms-1">
                                                     Apagar
                                                 </DangerButton>

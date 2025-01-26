@@ -3,14 +3,13 @@ import SuccessButton from "@/Components/Button/SuccessButton";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, Link, useForm } from "@inertiajs/react";
 
-export default function UserCreate() {
+export default function UserEdit({ user }) {
 
     // Receber os dados do formulário
-    const { data, setData, post, processing, errors} = useForm({
-        name: '',
-        email: '',
-        password: '',
-        password_confirmation: '',
+    const { data, setData, put, processing, errors} = useForm({
+        id: user.id || '',
+        name: user.name || '',
+        email: user.email || '',
     });
 
     // Enviar os dados para a rota cadastrar através do método POST
@@ -20,12 +19,12 @@ export default function UserCreate() {
         e.preventDefault(); 
 
         // Enviar os dados para a rota de criação de usuário
-        post(route('users.store'));
+        put(route('users.update', {user: data.id}));
     };
 
     return (
         <AuthenticatedLayout>
-            <Head title="Cadastrar Usuário" />
+            <Head title="Editar Usuário" />
 
             <div className="max-w-8xl mx-auto px-1 sm:px-0 lg:px-0">
                 <div className="flex justify-between items-center">
@@ -41,7 +40,7 @@ export default function UserCreate() {
                             Usuários
                         </Link>
                         <span className="mx-1">/</span>
-                        <span>Cadastrar</span>
+                        <span>Editar</span>
                     </nav>
                 </div>
             </div>
@@ -49,7 +48,7 @@ export default function UserCreate() {
             <div className="py-4 mx-auto max-w-8xl px-1 sm:px-0 lg:px-0">
                 <div className="overflow-hidden bg-white shadow-lg sm:rounded-lg dark:bg-gray-800 text-gray-900 dark:text-gray-100">
                     <div className="flex justify-between items-center p-3">
-                        <h3 className="text-lg">Cadastrar</h3>
+                        <h3 className="text-lg">Editar</h3>
                         <div className="flex space-x-4">
                             <Link href={route('users.index')}>
                                 <PrimaryButton className="ms-4 text-sm">
@@ -90,41 +89,12 @@ export default function UserCreate() {
                                 {errors.email && <span className="text-red-600">{errors.email}</span>}
                             </div>
 
-                            <div className="mb-4">
-                                <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Senha</label>
-                                <input
-                                    id="password"
-                                    type="password"
-                                    autoComplete="password"
-                                    value={data.password}
-                                    onChange={(e) => setData('password', e.target.value)}
-                                    placeholder="Senha para o usuário acessar o sistema"
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm dark:bg-gray-700 dark:text-white"
-                                    required
-                                />
-                                {errors.password && <span className="text-red-600">{errors.password}</span>}
-                            </div>
-
-                            <div className="mb-4">
-                                <label htmlFor="password_confirmation" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Senha</label>
-                                <input
-                                    id="password_confirmation"
-                                    type="password"
-                                    autoComplete="password_confirmation"
-                                    value={data.password_confirmation}
-                                    onChange={(e) => setData('password_confirmation', e.target.value)}
-                                    placeholder="Confirmar a senha"
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm dark:bg-gray-700 dark:text-white"
-                                    required
-                                />
-                                {errors.password && <span className="text-red-600">{errors.password}</span>}
-                            </div>
                             <div className="flex justify-end">
                                 <SuccessButton
                                     type="submit"
                                     disabled={processing}
                                     className="text-sm"
-                                >Cadastrar</SuccessButton>
+                                >Salvar</SuccessButton>
                             </div>
                         </form>
                     </div>

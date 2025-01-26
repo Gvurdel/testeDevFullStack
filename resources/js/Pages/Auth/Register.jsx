@@ -26,8 +26,16 @@ export default function Register() {
             <Head title="Register" />
 
             <form onSubmit={submit}>
+
+                   {/* Adicionando o Logo */}
+                    <img
+                        src="/images/logo3.jpeg" // Substitua pelo caminho correto do logo
+                        alt="Logo Senac Learning"
+                        className="w-14 h-13 mx-auto mb-4" // Define o tamanho do logo
+                    />
+
                 <div>
-                    <InputLabel htmlFor="name" value="Name" />
+                    <InputLabel htmlFor="Nome" value="Name" />
 
                     <TextInput
                         id="name"
@@ -37,6 +45,7 @@ export default function Register() {
                         autoComplete="name"
                         isFocused={true}
                         onChange={(e) => setData('name', e.target.value)}
+                        placeholder="NOME"
                         required
                     />
 
@@ -44,7 +53,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="email" value="Email" />
+                    <InputLabel htmlFor="Email" value="Email" />
 
                     <TextInput
                         id="email"
@@ -54,6 +63,7 @@ export default function Register() {
                         className="mt-1 block w-full"
                         autoComplete="username"
                         onChange={(e) => setData('email', e.target.value)}
+                        placeholder="EMAIL"
                         required
                     />
 
@@ -61,7 +71,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                    <InputLabel htmlFor="Senha" value="Senha" />
 
                     <TextInput
                         id="password"
@@ -71,6 +81,7 @@ export default function Register() {
                         className="mt-1 block w-full"
                         autoComplete="new-password"
                         onChange={(e) => setData('password', e.target.value)}
+                        placeholder="SENHA"
                         required
                     />
 
@@ -79,8 +90,8 @@ export default function Register() {
 
                 <div className="mt-4">
                     <InputLabel
-                        htmlFor="password_confirmation"
-                        value="Confirm Password"
+                        htmlFor="Confirme sua Senha"
+                        value="Confirme sua Senha"
                     />
 
                     <TextInput
@@ -93,6 +104,7 @@ export default function Register() {
                         onChange={(e) =>
                             setData('password_confirmation', e.target.value)
                         }
+                        placeholder="CONFIRME SUA SENHA"
                         required
                     />
 
@@ -102,17 +114,19 @@ export default function Register() {
                     />
                 </div>
 
-                <div className="mt-4 flex items-center justify-end">
+                <div className="mt-6 flex flex-col items-center">
+
+                    <PrimaryButton className="w-auto bg-black text-white-500 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold" disabled={processing}>
+                            CADASTRE SE
+                        </PrimaryButton><br></br>
+
                     <Link
                         href={route('login')}
-                        className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        className="rounded-md text-sm text-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
-                        Already registered?
+                        Já é cadastrado?
                     </Link>
 
-                    <PrimaryButton className="ms-4" disabled={processing}>
-                        Register
-                    </PrimaryButton>
                 </div>
             </form>
         </GuestLayout>

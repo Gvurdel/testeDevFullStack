@@ -33,7 +33,7 @@ export default function Login({ status, canResetPassword }) {
 
             <form
                 onSubmit={submit}
-                className="bg-orange-500 p-6 rounded-lg shadow-md max-w-md mx-auto"
+                className="bg-orange-400 p-7 rounded-lg shadow-md max-w-md mx-auto"
             >
                     <img
                             src="/images/logo.png" // Substitua pelo caminho correto do logo
@@ -97,7 +97,7 @@ export default function Login({ status, canResetPassword }) {
                 {/* Botão e link */}
                 <div className="mt-6 flex flex-col items-center">
                     <PrimaryButton
-                        className="w-full bg-white text-orange-500 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold"
+                        className="w-auto bg-black text-white-500 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold"
                         disabled={processing}
                     >
                         Acesse agora
@@ -106,13 +106,14 @@ export default function Login({ status, canResetPassword }) {
                     {canResetPassword && (
                         <Link
                             href={route("password.request")}
-                            className="mt-4 text-sm text-white underline hover:text-gray-300"
+                            className="mt-4 text-sm text-white hover:text-gray-300"
                         >
                             Esqueci meu login ou senha
                         </Link>
                     )}
                 </div>
             </form>
+            
 
         </GuestLayout>
     );

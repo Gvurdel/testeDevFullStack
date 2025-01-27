@@ -15,27 +15,38 @@ class UserSeeder extends Seeder
     {
         User::firstOrCreate(
             ['email' => 'vurdel@icloud.com'],
-            ['name' => 'Gustavo', 'email' => 'vurdel@icloud.com',
-            'password' => '123456A#']
+            [
+                'name' => 'Gustavo',
+                'password' => bcrypt('123456A#'),
+                'acess_level' => 1, // Administrador
+            ]
         );
 
         User::firstOrCreate(
-            ['email' => 'santos@icloud.com'],
-            ['name' => 'Joao', 'email' => 'joao@icloud.com',
-            'password' => '123456A#']
-        ); 
+            ['email' => 'joao@icloud.com'],
+            [
+                'name' => 'Joao',
+                'password' => bcrypt('123456A#'),
+                'acess_level' => 2, // Moderador
+            ]
+        );
 
         User::firstOrCreate(
             ['email' => 'silva@icloud.com'],
-            ['name' => 'Maria', 'email' => 'silva@icloud.com',
-            'password' => '123456A#']
+            [
+                'name' => 'Maria',
+                'password' => bcrypt('123456A#'),
+                'acess_level' => 3, // Leitor
+            ]
         );
 
         User::firstOrCreate(
-            ['email' => 'santos@icloud.com'],
-            ['name' => 'Jose', 'email' => 'santos@icloud.com',
-            'password' => '123456A#']
+            ['email' => 'jose@icloud.com'],
+            [
+                'name' => 'Jose',
+                'password' => bcrypt('123456A#'),
+                'acess_level' => 3, // Leitor
+            ]
         );
-            
     }
 }

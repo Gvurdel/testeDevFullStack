@@ -29,7 +29,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
                         className={`flex items-center px-4 py-2 mt-2 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 w-full 
                     ${route().current('dashboard') ? 'bg-gray-100 dark:bg-gray-700' : ''}`}
                     >
-                        Dashboard
+                        Painel do usuário
                     </Link>
 
                     <Link

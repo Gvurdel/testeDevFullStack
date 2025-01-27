@@ -22,16 +22,13 @@ git clone https://github.com/Gvurdel/testeDevFullStack.git
 
 ## Configurando o Sqlite:
 
-Copie e edite o arquivo .env na raiz do projeto e configure o caminho para o banco de dados SQLite.
+Crie arquivo .env na raiz do projeto e configure o caminho para o banco de dados SQLite.
+
+cp .env.example .env
 
 DB_DATABASE=/seu/repositorio/testeDevFullStack/database/database.sqlite
 
 APP_KEY=base64
-
-## Gerar chave:
-
-php artisan key:generate
-
 
 ## Composer
 
@@ -39,9 +36,9 @@ Execute o comando abaixo para instalar as dependências do Composer:
 
 composer install
 
-### Executar as migrations:
+## Gerar chave:
 
-php artisan migrate
+php artisan key:generate
 
 ## Popular o banco (seeders):
 
@@ -64,6 +61,10 @@ Senha: 123456A#
 
 Leitor:
 Qualquer cadastro realizado entra automaticamente como Leitor.
+
+### Executar as migrations:
+
+php artisan migrate
 
 ## Iniciar o servidor Laravel em um terminal:
 ```

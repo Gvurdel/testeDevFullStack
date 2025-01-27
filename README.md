@@ -24,7 +24,9 @@ git clone https://github.com/Gvurdel/testeDevFullStack.git
 
 Crie arquivo .env na raiz do projeto e configure o caminho para o banco de dados SQLite.
 
+```
 cp .env.example .env
+````
 
 DB_DATABASE=/seu/repositorio/testeDevFullStack/database/database.sqlite
 
@@ -34,25 +36,35 @@ APP_KEY=base64
 
 Execute o comando abaixo para instalar as dependências do Composer:
 
+```
 composer install
+````
 
 ### Executar as migrations:
 
+```
 php artisan migrate
+````
 
 ## Gerar chave:
 
+```
 php artisan key:generate
+````
 
 ## Popular o banco (seeders):
 
 Preencha o banco de dados com registros iniciais:
 
+```
 php artisan db:seed
+```
 
+```
 php artisan db:seed --class=UserSeeder
+````
 
-Usuários Criados (Seed):
+## Usuários Criados (Seed):
 
 Administrador:
 E-mail: vurdel@icloud.com

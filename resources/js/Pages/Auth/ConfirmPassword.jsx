@@ -36,7 +36,8 @@ export default function ConfirmPassword() {
                         type="password"
                         name="password"
                         value={data.password}
-                        className="mt-1 block w-full rounded-[30px]"
+                        className="mt-1 block w-full"
+                        style={{ borderRadius: '30px' }}
                         isFocused={true}
                         onChange={(e) => setData('password', e.target.value)}
                     />
@@ -44,8 +45,10 @@ export default function ConfirmPassword() {
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
-                <div className="mt-4 flex items-center justify-end rounded-[30px]">
-                    <PrimaryButton className="ms-4" disabled={processing}>
+                <div className="mt-4 flex items-center justify-end ">
+                    <PrimaryButton className="ms-4" disabled={processing}
+                    style={{ borderRadius: '30px' }}
+                    >
                         CONFIRMAR
                     </PrimaryButton>
                 </div>

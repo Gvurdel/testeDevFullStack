@@ -47,14 +47,15 @@ export default function Login({ status, canResetPassword }) {
 
                 {/* Campo de Email */}
                 <div>
-                    <InputLabel className="text-white" />
+                    <InputLabel className="text-white"  />
 
                     <TextInput
                         id="email"
                         type="email"
                         name="email"
                         value={data.email}
-                        className="mt-1 block w-full p-3 bg-white focus:ring-2 rounded-[30px] focus:ring-blue-500"
+                        style={{ borderRadius: '30px' }}
+                        className="mt-1 block w-full p-3 bg-white focus:ring-2  focus:ring-blue-500"
                         autoComplete="username"
                         isFocused={true}
                         onChange={(e) => setData("email", e.target.value)}
@@ -73,7 +74,8 @@ export default function Login({ status, canResetPassword }) {
                         type="password"
                         name="password"
                         value={data.password}
-                        className="mt-1 block w-full p-3 bg-white rounded-[30px] focus:ring-2 focus:ring-blue-500"
+                        style={{ borderRadius: '30px' }}
+                        className="mt-1 block w-full p-3 bg-white focus:ring-2 focus:ring-blue-500"
                         autoComplete="current-password"
                         onChange={(e) => setData("password", e.target.value)}
                         placeholder="SENHA"
@@ -97,8 +99,9 @@ export default function Login({ status, canResetPassword }) {
                 {/* Botão e link */}
                 <div className="mt-6 flex flex-col items-center">
                     <PrimaryButton
-                        className="w-auto bg-black text-white-500 py-3 rounded-[30px] hover:bg-gray-100 transition duration-300 font-semibold"
+                        className="w-auto bg-black text-white-500 py-3  hover:bg-gray-100 transition duration-300 font-semibold"
                         disabled={processing}
+                        style={{ borderRadius: '30px' }}
                     >
                         Acesse agora
                     </PrimaryButton>

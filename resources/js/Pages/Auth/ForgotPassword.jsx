@@ -45,7 +45,8 @@ export default function ForgotPassword({ status }) {
                     type="email"
                     name="email"
                     value={data.email}
-                    className="mt-1 block w-full rounded-[30px]"
+                    style={{ borderRadius: '30px' }}
+                    className="mt-1 block w-full"
                     isFocused={true}
                     onChange={(e) => setData('email', e.target.value)}
                     placeholder="DIGITE SEU E-MAIL"
@@ -55,7 +56,9 @@ export default function ForgotPassword({ status }) {
 
                 <div className="mt-6 flex flex-col items-center">
                     
-                    <PrimaryButton className="w-auto bg-black text-white-500 py-3 rounded-[30px] hover:bg-gray-100 transition duration-300 font-semibold" disabled={processing}>
+                    <PrimaryButton className="w-auto bg-black text-white-500 py-3 hover:bg-gray-100 transition duration-300 font-semibold" disabled={processing}
+                        style={{ borderRadius: '30px' }}
+                    >
                         RESETE SUA SENHA
                     </PrimaryButton>
                 </div>

@@ -3,23 +3,23 @@
 ## Requisitos:
 
 Certifique-se de que os seguintes requisitos estejam instalados no ambiente antes de iniciar o projeto:
-```
+
+
 PHP: v8.4.1
-```
+
 SQLite: v3.43.2
-```
-```
+
 Composer: v2.8.3
-```
+
 Node.js: v18.18.0
-```
+
 
 ## Rodando o Projeto:
 
 Clone o repositório:
-```
+
 git clone https://github.com/Gvurdel/testeDevFullStack.git 
-```
+
 ## Configurando o Sqlite:
 
 Edite o arquivo .env na raiz do projeto e configure o caminho para o banco de dados SQLite.
@@ -29,19 +29,19 @@ Ex: DB_DATABASE=/seu/repositorio/testeDevFullStack/database/database.sqlite
 ## Composer
 
 Execute o comando abaixo para instalar as dependências do Composer:
-```
+
 composer install
-```
+
 ### Executar as migrations:
-```
+
 php artisan migrate
-```
+
 ## Popular o banco (seeders):
 
 Preencha o banco de dados com registros iniciais:
-```
+
 php artisan db:seed
-```
+
 Usuários Criados (Seed):
 
 Administrador:

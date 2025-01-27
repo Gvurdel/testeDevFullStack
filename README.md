@@ -36,6 +36,10 @@ Execute o comando abaixo para instalar as dependências do Composer:
 
 composer install
 
+### Executar as migrations:
+
+php artisan migrate
+
 ## Gerar chave:
 
 php artisan key:generate
@@ -47,7 +51,6 @@ Preencha o banco de dados com registros iniciais:
 php artisan db:seed
 
 php artisan db:seed --class=UserSeeder
-
 
 Usuários Criados (Seed):
 
@@ -61,10 +64,6 @@ Senha: 123456A#
 
 Leitor:
 Qualquer cadastro realizado entra automaticamente como Leitor.
-
-### Executar as migrations:
-
-php artisan migrate
 
 ## Iniciar o servidor Laravel em um terminal:
 ```

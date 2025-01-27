@@ -5,9 +5,13 @@
 Certifique-se de que os seguintes requisitos estejam instalados no ambiente antes de iniciar o projeto:
 
 PHP: v8.4.1
+```
 SQLite: v3.43.2
+```
 Composer: v2.8.3
+```
 Node.js: v18.18.0
+```
 
 ## Rodando o Projeto:
 
@@ -62,11 +66,11 @@ npm run dev
 
 Containers oferecem portabilidade entre ambientes, garantem consistência no desenvolvimento e produção, proporcionam isolamento de aplicações, são mais leves e rápidos que máquinas virtuais, facilitam a escalabilidade e a automação com CI/CD, além de reduzir custos operacionais e suportar arquiteturas modernas como microsserviços.
 
-## Explique a diferença entre Git e GitHub:
+## Questão 2 - Explique a diferença entre Git e GitHub:
 
 A diferença entre Git e GitHub está no fato de que o Git é uma ferramenta de controle de versão, enquanto o GitHub é uma plataforma que utiliza o Git como base para colaboração em projetos.
 
-## Explique a arquitetura MVC:
+## Questão 3 - Explique a arquitetura MVC:
 
 A arquitetura MVC (Model-View-Controller) é um padrão de design de software amplamente utilizado no desenvolvimento de aplicações web e desktop. Ela separa a aplicação em três camadas principais — Model, View e Controller — para organizar o código de forma eficiente, modular e reutilizável.
 

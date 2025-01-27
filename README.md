@@ -22,9 +22,16 @@ git clone https://github.com/Gvurdel/testeDevFullStack.git
 
 ## Configurando o Sqlite:
 
-Edite o arquivo .env na raiz do projeto e configure o caminho para o banco de dados SQLite.
+Copie e edite o arquivo .env na raiz do projeto e configure o caminho para o banco de dados SQLite.
 
-Ex: DB_DATABASE=/seu/repositorio/testeDevFullStack/database/database.sqlite
+DB_DATABASE=/seu/repositorio/testeDevFullStack/database/database.sqlite
+
+APP_KEY=base64
+
+## Gerar chave:
+
+php artisan key:generate
+
 
 ## Composer
 
@@ -41,6 +48,9 @@ php artisan migrate
 Preencha o banco de dados com registros iniciais:
 
 php artisan db:seed
+
+php artisan db:seed --class=UserSeeder
+
 
 Usuários Criados (Seed):
 
@@ -59,7 +69,12 @@ Qualquer cadastro realizado entra automaticamente como Leitor.
 ```
 php artisan serve
 ```
-## Executar o servidor Node.js em outro terminal:
+## Instalar e executar o servidor Node.js em outro terminal:
+
+````
+npm install
+````
+
 ```
 npm run dev
 ```

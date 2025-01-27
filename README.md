@@ -17,9 +17,9 @@ Node.js: v18.18.0
 ## Rodando o Projeto:
 
 Clone o repositório:
-
-git clone https://github.com/Gvurdel/testeDevFullStack.git ;
-
+```
+git clone https://github.com/Gvurdel/testeDevFullStack.git 
+```
 ## Configurando o Sqlite:
 
 Edite o arquivo .env na raiz do projeto e configure o caminho para o banco de dados SQLite.
@@ -29,19 +29,19 @@ Ex: DB_DATABASE=/seu/repositorio/testeDevFullStack/database/database.sqlite
 ## Composer
 
 Execute o comando abaixo para instalar as dependências do Composer:
-
+```
 composer install
-
+```
 ### Executar as migrations:
-
+```
 php artisan migrate
-
+```
 ## Popular o banco (seeders):
 
 Preencha o banco de dados com registros iniciais:
-
+```
 php artisan db:seed
-
+```
 Usuários Criados (Seed):
 
 Administrador:
@@ -56,13 +56,13 @@ Leitor:
 Qualquer cadastro realizado entra automaticamente como Leitor.
 
 ## Iniciar o servidor Laravel em um terminal:
-
+```
 php artisan serve
-
+```
 ## Executar o servidor Node.js em outro terminal:
-
+```
 npm run dev
-
+```
 ## Questão 1 - Quais as principais vantagens de se trabalhar utilizando ambientes de containers?
 
 Containers oferecem portabilidade entre ambientes, garantem consistência no desenvolvimento e produção, proporcionam isolamento de aplicações, são mais leves e rápidos que máquinas virtuais, facilitam a escalabilidade e a automação com CI/CD, além de reduzir custos operacionais e suportar arquiteturas modernas como microsserviços.
